@@ -1,40 +1,30 @@
-# Dataset / generated model artifacts
-data/
-models/
-
-# Large ML artifacts
-*.pt
-*.pth
-*.ckpt
-*.onnx
-*.npy
-*.npz
-
-# Generated experiment outputs
-reports/*.csv
-reports/*.json
-reports/*.pkl
-
 # Python
 __pycache__/
 *.py[cod]
-*.egg-info/
 .pytest_cache/
-.mypy_cache/
-.ruff_cache/
+.pytest_tmp/
 
-# Environments / secrets
+# Environments
 .venv/
 venv/
 env/
-.env
-.env.*
 
-# Jupyter
-.ipynb_checkpoints/
-
-# IDE / OS
+# IDE
 .vscode/
-.idea/
+
+# Raw datasets
+data/
+
+# Large model artifacts
+models/
+
+# Temporary archives
+*.zip
+
+# Generated NumPy report artifacts
+reports/*.npy
+reports/**/*.npy
+
+# OS
 .DS_Store
 Thumbs.db

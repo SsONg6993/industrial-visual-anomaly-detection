@@ -1,0 +1,11 @@
+defect_type,total,true_positive,false_negative,recall,miss_rate
+bianxing,40,31,9,0.7750,0.2250
+yashang,225,198,27,0.8800,0.1200
+aotu,80,73,7,0.9125,0.0875
+fabai,108,99,9,0.9167,0.0833
+pengshang,15,14,1,0.9333,0.0667
+guoxi,75,71,4,0.9467,0.0533
+huashang,330,314,16,0.9515,0.0485
+yise,54,53,1,0.9815,0.0185
+liangying,58,57,1,0.9828,0.0172
+shuiyin,92,91,1,0.9891,0.0109

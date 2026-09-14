@@ -1,0 +1,34 @@
+{
+  "experiment": "vector_search_exact_benchmark",
+  "device": "cuda",
+  "images": 719,
+  "coreset_shape": [
+    72979,
+    384
+  ],
+  "chunk_size": 8192,
+  "threshold": 0.5697578191757202,
+  "full_gpu": {
+    "latency": {
+      "mean_ms": 8.292186508370985,
+      "median_ms": 9.428099961951375,
+      "p95_ms": 9.627740026917309,
+      "min_ms": 3.720099979545921,
+      "max_ms": 10.339199972804636
+    }
+  },
+  "chunked_gpu": {
+    "latency": {
+      "mean_ms": 8.581275522407088,
+      "median_ms": 9.787800023332238,
+      "p95_ms": 10.048790031578392,
+      "min_ms": 3.605300036724657,
+      "max_ms": 10.928200033959001
+    },
+    "max_score_difference": 0.0,
+    "prediction_consistency": 1.0
+  },
+  "faiss_available": false,
+  "faiss_gpu_available": false,
+  "peak_gpu_memory_mb": 447.22998046875
+}

@@ -1,0 +1,120 @@
+{
+  "experiment": "clean_v2c_full32_greedy10",
+  "product": "Aluminum_Camera_Cover",
+  "dataset_split": {
+    "train_images": 770,
+    "validation_images": 721,
+    "test_images": 719,
+    "zero_exact_hash_overlap": true
+  },
+  "model": {
+    "backbone": "ResNet18",
+    "pretrained": "ImageNet",
+    "feature_layers": [
+      "layer2",
+      "layer3"
+    ],
+    "feature_resolution": "32x32",
+    "feature_dim": 384,
+    "preprocessing": "Letterbox256",
+    "memory": "normal_only",
+    "coreset_ratio": 0.1,
+    "coreset_size": 72979
+  },
+  "threshold_selection": {
+    "source": "validation_only",
+    "method": "best_f1",
+    "selected_threshold": 0.5697578191757202,
+    "validation_at_selected_threshold": {
+      "threshold": 0.5697578191757202,
+      "precision": 0.8662092624356775,
+      "recall": 0.9369202226345084,
+      "f1": 0.9001782531194296,
+      "tn": 104,
+      "fp": 78,
+      "fn": 34,
+      "tp": 505,
+      "false_positive_rate": 0.42857142857142855,
+      "false_negative_rate": 0.06307977736549165
+    },
+    "validation_recall95_operating_point": {
+      "threshold": 0.5545211434364319,
+      "precision": 0.8368678629690048,
+      "recall": 0.9517625231910947
+    }
+  },
+  "validation": {
+    "ranking_metrics": {
+      "auroc": 0.9010326408285592,
+      "average_precision": 0.9659832201069135
+    },
+    "threshold_metrics": {
+      "threshold": 0.5697578191757202,
+      "precision": 0.8662092624356775,
+      "recall": 0.9369202226345084,
+      "f1": 0.9001782531194296,
+      "tn": 104,
+      "fp": 78,
+      "fn": 34,
+      "tp": 505,
+      "false_positive_rate": 0.42857142857142855,
+      "false_negative_rate": 0.06307977736549165
+    },
+    "score_statistics": {
+      "good": {
+        "count": 182,
+        "mean": 0.570419464465026,
+        "median": 0.5628175437450409,
+        "min": 0.47281309962272644,
+        "max": 0.7767431139945984
+      },
+      "defect": {
+        "count": 539,
+        "mean": 0.72459183486804,
+        "median": 0.7436148524284363,
+        "min": 0.4964108467102051,
+        "max": 0.9297319650650024
+      }
+    }
+  },
+  "final_test": {
+    "ranking_metrics": {
+      "auroc": 0.9288648359999178,
+      "average_precision": 0.9769439118826566
+    },
+    "threshold_metrics_using_validation_threshold": {
+      "threshold": 0.5697578191757202,
+      "precision": 0.8767361111111112,
+      "recall": 0.9386617100371747,
+      "f1": 0.9066427289048474,
+      "tn": 110,
+      "fp": 71,
+      "fn": 33,
+      "tp": 505,
+      "false_positive_rate": 0.39226519337016574,
+      "false_negative_rate": 0.06133828996282528
+    },
+    "score_statistics": {
+      "good": {
+        "count": 181,
+        "mean": 0.5599434787397226,
+        "median": 0.5512442588806152,
+        "min": 0.46549147367477417,
+        "max": 0.752818763256073
+      },
+      "defect": {
+        "count": 538,
+        "mean": 0.7298539365091289,
+        "median": 0.7490185499191284,
+        "min": 0.49213141202926636,
+        "max": 0.9661898612976074
+      }
+    }
+  },
+  "notes": [
+    "Exact duplicate leakage was removed before evaluation.",
+    "Threshold was selected using validation only.",
+    "Final test was not used for threshold optimization.",
+    "Near-duplicate pHash candidates were not automatically removed."
+  ]
+}

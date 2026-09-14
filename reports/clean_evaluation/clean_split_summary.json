@@ -1,0 +1,103 @@
+{
+  "product": "Aluminum_Camera_Cover",
+  "random_seed": 42,
+  "validation_fraction": 0.5,
+  "raw_counts": {
+    "train_good_images": 784,
+    "test_images": 1446
+  },
+  "deduplication": {
+    "unique_train_hashes": 770,
+    "train_internal_duplicates_removed": 14,
+    "test_images_excluded_due_to_train_test_leakage": 6,
+    "test_internal_duplicates_removed": 0,
+    "unique_clean_test_pool_before_val_test_split": 1440
+  },
+  "split_counts": {
+    "train": 770,
+    "validation": 721,
+    "test": 719
+  },
+  "split_counts_by_defect_type": {
+    "train": {
+      "good": 770
+    },
+    "validation": {
+      "aotu": 40,
+      "bianxing": 20,
+      "fabai": 54,
+      "good": 182,
+      "guoxi": 38,
+      "huashang": 165,
+      "liangying": 29,
+      "pengshang": 8,
+      "shuiyin": 46,
+      "yashang": 112,
+      "yise": 27
+    },
+    "test": {
+      "aotu": 40,
+      "bianxing": 20,
+      "fabai": 54,
+      "good": 181,
+      "guoxi": 37,
+      "huashang": 165,
+      "liangying": 29,
+      "pengshang": 7,
+      "shuiyin": 46,
+      "yashang": 113,
+      "yise": 27
+    }
+  },
+  "verification": {
+    "zero_cross_split_hash_overlap": true,
+    "overlap_counts": {
+      "train_val": 0,
+      "train_test": 0,
+      "val_test": 0
+    }
+  },
+  "examples": {
+    "train_test_leakage_removed": [
+      {
+        "sha256": "082cdec931535ab1b84315cba97830b27690ad3c018c3a738c4f639a36c342aa",
+        "excluded_test_images": [
+          "data/3CAD/Aluminum_Camera_Cover/test/good/000098.png",
+          "data/3CAD/Aluminum_Camera_Cover/test/good/000310.png"
+        ]
+      },
+      {
+        "sha256": "0c91b414c14f3de51a70cb139fc8692069e49cc514fbc4e348bee8f82a8e11ae",
+        "excluded_test_images": [
+          "data/3CAD/Aluminum_Camera_Cover/test/good/000126.png"
+        ]
+      },
+      {
+        "sha256": "14af38032d85d384d50fedc2100f4ee956365af2dc124ef44789720b20ef6356",
+        "excluded_test_images": [
+          "data/3CAD/Aluminum_Camera_Cover/test/good/000049.png"
+        ]
+      },
+      {
+        "sha256": "9961e7098ced5e3872541f533367fb2a5400ce08736eb4621896c30277d7d56e",
+        "excluded_test_images": [
+          "data/3CAD/Aluminum_Camera_Cover/test/good/000360.png"
+        ]
+      },
+      {
+        "sha256": "fc37c0fa467f6827aae589357250ef438cf841363fa16bbace940703b45aa9f0",
+        "excluded_test_images": [
+          "data/3CAD/Aluminum_Camera_Cover/test/good/000188.png"
+        ]
+      }
+    ],
+    "test_internal_duplicates_removed": []
+  },
+  "notes": [
+    "Raw 3CAD files are never deleted or moved; only manifest membership changes.",
+    "Exact duplicate detection uses SHA-256 file hashes.",
+    "Near-duplicate/pHash candidates are intentionally not removed automatically.",
+    "Training remains one-class: only good training samples are used.",
+    "Validation is intended for threshold selection; final test should remain untouched until final evaluation."
+  ]
+}
